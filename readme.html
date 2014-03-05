@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<h1 id="在微信公众平台上用markdown写作">在微信公众平台上用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>写作</h1>
+<h2 id="为什么">为什么？</h2>
+<p>用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>写作是我挺喜爱的一种方式，毕竟纯文字的方式写作会受到的干扰最少了，不用担心排版的问题，不用担心字体的问题，一切都是已经预置好了，当然配合CSS的强大可定制特性更是可以让效果随心所欲了，这里便是利用这一特性进行定制的。</p>
+<pre><code> 话说，在这里简单补充一句，[Markdown]凭借其简单的语法，更易于学习和输入的特性，近年来赢得了大量专业写作人士的喜爱，如果写作是你生活中不可缺少的一部分，而你却尚不了解[Markdown]，那现在就是时候去了解一下了。</code></pre>
+<p>好的，回到这里，如果你决定继续读下去，说明你已经有要使用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>写作的觉悟了，我们继续探讨微信公众平台的情况。</p>
+<p>为了两个目的，一是我的文章可以不但用于微信公众平台发送，还可以发至博客或其他更多的地方而不需要重新排版，并继续拥有丰富的版面效果，二是可以方便的写作，于是毫无疑问，本来就已经是我写作工具的<a href="http://daringfireball.net/projects/markdown/">Markdown</a>定然当选了。</p>
+<p>微信公众平台有一些限制使得一般普通的复制粘贴<a href="http://daringfireball.net/projects/markdown/">Markdown</a>生成的文章都会有些欠缺，通过网络搜寻后发现无人解决，故亲自上阵解决之，这里便将步骤和情况的共享出来了，方便大家参考和使用。</p>
+<h2 id="如何使用">如何使用？</h2>
+<h3 id="前置条件">前置条件</h3>
+<ul>
+<li><a href="http://johnmacfarlane.net/pandoc/">pandoc</a> 请从官网下载安装</li>
+</ul>
+<h3 id="方法一">方法一</h3>
+<ol style="list-style-type: decimal">
+<li><p>获取项目文件：</p>
+<pre><code>$ git clone https://github.com/wizicer/wx-article-starter.git</code></pre></li>
+<li>添加你自己的<a href="http://daringfireball.net/projects/markdown/">Markdown</a>文件，并以<code>.md</code>作为扩展名</li>
+<li>执行<code>build.bat</code>生成<code>html</code>文件</li>
+<li><p>打开该文件并将其拷贝粘贴至微信公众平台的编辑窗口</p></li>
+</ol>
+<h3 id="方法二">方法二</h3>
+<ol style="list-style-type: decimal">
+<li>Fork该项目</li>
+<li>将该项目下载至本地</li>
+<li>添加你自己的<a href="http://daringfireball.net/projects/markdown/">Markdown</a>文件，并以<code>.md</code>作为扩展名</li>
+<li>执行<code>build.bat</code>生成<code>html</code>文件</li>
+<li>打开该文件并将其拷贝粘贴至微信公众平台的编辑窗口</li>
+</ol>
+<h2 id="如何修改样式">如何修改样式？</h2>
+<pre><code>以下具体步骤对于不需要修改样式的用户可以忽略</code></pre>
+<p>微信公众平台作为众多消息分发的一个终端，有其特殊性，我发现的限制如下（可能不完全，会不断补充的）： * 过滤掉<code>&lt;div&gt;</code>/<code>&lt;a&gt;</code>标签（即不可全页背景，不可有链接） * 预置了一个css文件，会将未明确写明的css样式变化掉</p>
+<p>在了解以上限制的基础上，就好做了，按如下步骤：</p>
+<ol style="list-style-type: decimal">
+<li>准备一份使用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>生成的文档</li>
+<li><strong>关键步骤</strong>：下载了一份微信的预置css存为<code>override.css</code>，并<code>link</code>到页面上</li>
+<li>将我们自己创建的<code>style.css</code>也链接进来，我是选取我以前使用的<a href="http://daringfireball.net/projects/markdown/">Markdown</a>的样式</li>
+<li>调整<code>style.css</code>文件，并在浏览器中预览，直到效果满意为止</li>
+</ol>
+<p>其实关键点就在微信预置的那个css文件。</p>
+<pre><code>**注意**：本文将会不断迭代更新，获取最新版本请查看网页版</code></pre>
+</body>
+</html>
