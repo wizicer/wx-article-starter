@@ -24,33 +24,37 @@
 <li><a href="http://johnmacfarlane.net/pandoc/">pandoc</a> 请从官网下载安装</li>
 </ul>
 <h3 id="方法一">方法一</h3>
-<ol style="list-style-type: decimal">
+<ul>
 <li><p>获取项目文件：</p>
 <pre><code>$ git clone https://github.com/wizicer/wx-article-starter.git</code></pre></li>
 <li>添加你自己的<a href="http://daringfireball.net/projects/markdown/">Markdown</a>文件，并以<code>.md</code>作为扩展名</li>
 <li>执行<code>build.bat</code>生成<code>html</code>文件</li>
 <li><p>打开该文件并将其拷贝粘贴至微信公众平台的编辑窗口</p></li>
-</ol>
+</ul>
 <h3 id="方法二">方法二</h3>
-<ol style="list-style-type: decimal">
+<ul>
 <li>Fork该项目</li>
 <li>将该项目下载至本地</li>
 <li>添加你自己的<a href="http://daringfireball.net/projects/markdown/">Markdown</a>文件，并以<code>.md</code>作为扩展名</li>
 <li>执行<code>build.bat</code>生成<code>html</code>文件</li>
 <li>打开该文件并将其拷贝粘贴至微信公众平台的编辑窗口</li>
-</ol>
+</ul>
 <h2 id="如何修改样式">如何修改样式？</h2>
 <blockquote>
 <p>以下具体步骤对于不需要修改样式的用户可以忽略</p>
 </blockquote>
-<p>微信公众平台作为众多消息分发的一个终端，有其特殊性，我发现的限制如下（可能不完全，会不断补充的）： * 过滤掉<code>&lt;div&gt;</code>/<code>&lt;a&gt;</code>标签（即不可全页背景，不可有链接） * 预置了一个css文件，会将未明确写明的css样式变化掉</p>
+<p>微信公众平台作为众多消息分发的一个终端，有其特殊性，我发现的限制如下（可能不完全，会不断补充的）：</p>
+<ul>
+<li>过滤掉<code>&lt;div&gt;</code>/<code>&lt;a&gt;</code>标签（即不可全页背景，不可有链接）</li>
+<li>预置了一个css文件，会将未明确写明的css样式变化掉</li>
+</ul>
 <p>在了解以上限制的基础上，就好做了，按如下步骤：</p>
-<ol style="list-style-type: decimal">
+<ul>
 <li>准备一份使用<a href="http://daringfireball.net/projects/markdown/">Markdown</a>生成的文档</li>
 <li><strong>关键步骤</strong>：下载了一份微信的预置css存为<code>override.css</code>，并<code>link</code>到页面上</li>
 <li>将我们自己创建的<code>style.css</code>也链接进来，我是选取我以前使用的<a href="http://daringfireball.net/projects/markdown/">Markdown</a>的样式</li>
 <li>调整<code>style.css</code>文件，并在浏览器中预览，直到效果满意为止</li>
-</ol>
+</ul>
 <p>其实关键点就在微信预置的那个css文件。</p>
 <blockquote>
 <p><strong>注意</strong>：本文将会不断迭代更新，获取最新版本请查看网页版</p>
