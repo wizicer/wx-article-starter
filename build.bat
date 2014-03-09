@@ -5,6 +5,5 @@ if "%1"=="debug" (
     set debug=
 )
 echo Generating... 
-for /r %%i in (*.md) do pandoc -s "%%i" -o "%%~di%%~pi%%~ni.html" %debug% --css "style.css" --smart --no-highlight
+for /r %%i in (*.md) do pandoc -s "%%i" -o "%%~di%%~pi%%~ni.html" %debug% --css "style.css" --smart --no-highlight -A foot.inc
 echo Generated 
-
